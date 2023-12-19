@@ -1,0 +1,16 @@
+-- Tạo database coinapp (nếu chưa tồn tại)
+CREATE DATABASE IF NOT EXISTS coinapp;
+
+-- Sử dụng database coinapp
+USE coinapp;
+
+-- Tạo bảng userpf
+CREATE TABLE IF NOT EXISTS userpf (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    role VARCHAR(20) NOT NULL
+);
+INSERT INTO userpf (email, username, password, role)
+VALUES ('admin@gmail.com','admin', '123456', 'admin');
